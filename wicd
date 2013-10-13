@@ -1,0 +1,2 @@
+sudo apt-get install wicd-gtk &&
+sudo apt-get remove --purge network-manager-gnome network-manager

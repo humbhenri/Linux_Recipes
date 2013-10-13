@@ -1,0 +1,26 @@
+#!/bin/bash
+
+CONF=~/.config/redshift.conf
+
+touch $CONF
+
+cat >> $CONF << END
+; Global settings
+[redshift]
+temp-day=6500
+temp-night=4500
+transition=1
+gamma=0.8:0.7:0.8
+location-provider=manual
+adjustment-method=vidmode
+ 
+; The location provider and adjustment method settings
+; are in their own sections.
+[manual]
+lat=-19
+lon=-43
+ 
+[vidmode]
+screen=0
+END
+
